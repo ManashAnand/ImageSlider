@@ -1,0 +1,71 @@
+body{
+    margin: 0;
+ 
+}
+#mainBox{
+ 
+    /* border: 2px solid red; */
+    height: 100vh;
+    display: flex;
+    transition: all 2s;
+    transform: all 2s;
+}
+.panel{
+    border: 1px solid;
+    flex: 1;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* flex 1 means item will take full space as possible and also 
+be responsive when shrinking
+for more note google it bcz flex is of two type flex 1 and flex 0 */
+.panel1{
+    background-image: url(first.jpg);
+   
+}
+.panel2{
+    background-image: url(fourth.jpg);
+    
+}
+.panel3{
+    background-image: url(third.jpg);
+    
+}
+.panel4{
+    background-image: url(fifth.jpg);
+}
+.panel5{
+    background-image: url(second.jpg);
+}
+/* This below code will make every panel1 to panel5 as flex */
+.panel > *{  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.panel > *:first-child{
+    transform: translateY(-100%);
+
+}
+.panel.active>*:first-child{
+    transform: translateY(0);
+}
+/* jab isme active class add ho jaye to ye uper wala css add ho jaye */
+.panel> *:last-child{
+    transform: translateY(100%);
+ 
+}
+.panel.active>*:last-child{
+    transform: translateY(0);
+}
+.panel p{
+    flex: 1;
+    transition: all 2s;
+}
+.panel.open{
+    font-size: 40px;
+    flex: 3;
+}
