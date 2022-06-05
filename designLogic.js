@@ -1,3 +1,4 @@
+window.onload = () => {
 panel = document.querySelectorAll('.panel');
 // console.log(panel);
 panel.forEach(element => {
@@ -12,3 +13,5 @@ panel.forEach(element => {
             element.classList.remove("open");
     });
 });
+
+};
